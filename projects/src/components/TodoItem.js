@@ -2,9 +2,10 @@ import React, { Component } from "react";
 class TodoItem extends Component {
   state = {};
   render() {
+    const { title } = this.props;
     return (
       <li className="list-group-item text-capitalize d-flex  justify-content-between my-2">
-        <h6>title</h6>
+        <h6>{title}</h6>
         <div className="todo-list ">
           <span className="mx-2 text-success">
             <i className="fa fa-pencil"></i>
