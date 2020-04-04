@@ -10,9 +10,13 @@ class TodoList extends Component {
       <ul className="list-group my-5">
         <h3 className="text-capitalize text-center"> todo list</h3>
         {items.map(item => {
-          return <TodoItem key={item.id} title={item.title} 
-          handleDelete={handleDelete}
-          />;
+          return (
+            <TodoItem
+              key={item.id}
+              title={item.title}
+              handleDelete={id => handleDelete(item.id)}
+            />
+          );
         })}
 
         <button
